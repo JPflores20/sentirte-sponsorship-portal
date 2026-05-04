@@ -77,8 +77,8 @@ export function SponsorshipForm({ onSuccess }: { onSuccess: () => void }) {
     initial: { opacity: 0, y: 16 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: "-50px" },
-    transition: { duration: 0.5, ease: "easeOut" },
-  };
+    transition: { duration: 0.5, ease: "easeOut" as const },
+  } as const;
 
   const Field = ({
     label,
